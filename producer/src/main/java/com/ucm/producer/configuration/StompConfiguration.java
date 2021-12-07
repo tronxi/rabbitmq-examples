@@ -1,4 +1,4 @@
-package com.example.stompproducer.configuration;
+package com.ucm.producer.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,7 @@ public class StompConfiguration implements WebSocketMessageBrokerConfigurer {
     @Value("${spring.rabbitmq.host}")
     String hostname;
 
-    @Value("${spring.rabbitmq.port}")
+    @Value("${spring.rabbitmq.stomp.port}")
     int port;
 
     @Value("${spring.rabbitmq.username}")
@@ -38,4 +38,3 @@ public class StompConfiguration implements WebSocketMessageBrokerConfigurer {
         registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
     }
 }
-

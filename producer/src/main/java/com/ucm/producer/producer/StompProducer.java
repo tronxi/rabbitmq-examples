@@ -1,8 +1,8 @@
-package com.example.stompproducer.producer;
+package com.ucm.producer.producer;
 
-import com.example.stompproducer.model.Message;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ucm.producer.model.Message;
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;

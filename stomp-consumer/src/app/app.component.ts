@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.client = new Client();
     this.client.webSocketFactory = () => {
-      return new SockJS('http://localhost:8079/ws');
+      return new SockJS('http://localhost:8080/ws');
     };
     this.client.onConnect = (frame) => {
       this.client.subscribe('/topic/message',  (event) => {
